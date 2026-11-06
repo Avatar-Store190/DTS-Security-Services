@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DTS Security Services | Security Guards in Blue Downs</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+:root{--navy:#0A1A33;--navy2:#12294D;--gold:#C9A24B;--gold2:#E8C86A;--light:#F2F3F5;--dark:#111}
+body{background:#fff;color:#111;line-height:1.6;font-size:18px}
+a{text-decoration:none}
+.topbar{background:var(--gold);color:#000;padding:10px 16px;text-align:center;font-size:17px;font-weight:800}
+header{position:sticky;top:0;background:#fff;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;box-shadow:0 2px 10px rgba(0,0,0,.15);z-index:10}
+.logo-box{display:flex;align-items:center;gap:10px}
+.logo-box img{height:58px;width:auto;max-width:210px;object-fit:contain;background:#fff;border-radius:6px}
+.logo-demo{width:58px;height:58px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-size:22px;font-weight:900;border-radius:6px;border:2px solid var(--gold)}
+.logo-text{line-height:1.1}.logo-text b{color:var(--navy);font-size:19px}.logo-text span{color:#666;font-size:12px;letter-spacing:1px;font-weight:800}
+.btn{background:var(--gold);color:#000;padding:16px 22px;border-radius:10px;font-weight:900;display:inline-block;border:none;cursor:pointer;font-size:18px;text-align:center}
+.btn-navy{background:var(--navy);color:#fff} .btn-green{background:#25D366;color:#fff} .btn-grey{background:#E8EAF0;color:#111} .btn-white{background:#fff;color:var(--navy)}
+.hero{background:linear-gradient(180deg,#0A1A33 0%,#12294D 100%);color:#fff;padding:32px 16px 36px;text-align:center}
+.hero-logo{background:#fff;padding:14px 18px;border-radius:12px;display:inline-block;min-width:220px}
+.hero-logo img{max-height:80px;max-width:280px;width:auto;display:block;margin:0 auto}
+.hero .badge{background:var(--gold);color:#000;display:inline-block;padding:8px 14px;border-radius:999px;font-size:16px;font-weight:900;margin-top:16px}
+.hero h2{font-size:36px;line-height:1.15;margin:16px 0 12px}.hero h2 span{color:var(--gold2)}
+.hero p{font-size:19px;max-width:600px;margin:0 auto 20px;opacity:.95}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.trust{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:20px;font-size:16px;font-weight:700}
+.trust div{background:rgba(255,255,255,.15);padding:10px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.3)}
+.section{padding:32px 16px;max-width:760px;margin:0 auto}
+.section h3{font-size:28px;color:var(--navy);margin-bottom:8px}.section p.sub{color:#555;font-size:18px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:#F2F3F5;padding:20px;border-radius:14px;border-left:6px solid var(--gold)}
+.card h4{color:var(--navy);font-size:20px;margin-bottom:6px}.card p{font-size:17px;color:#333}
+.price-tag{font-weight:900;color:var(--navy);font-size:20px;margin-top:10px}
+.price{background:#FFF8E1;border:2px solid var(--gold);padding:16px;border-radius:10px;margin-top:14px;font-size:18px}
+.review{background:#fff;border:2px solid #E8EAF0;border-radius:14px;padding:20px;margin-bottom:12px}
+.stars{color:#C9A24B;font-size:22px}
+input,select,textarea{width:100%;padding:16px;border-radius:10px;border:2px solid #CBD0D8;margin:8px 0 12px;font-size:18px}
+label{font-size:17px;font-weight:800}
+.areas{display:flex;flex-wrap:wrap;gap:10px}.areas span{background:#E8EAF0;padding:10px 14px;border-radius:999px;font-size:17px;font-weight:700;color:var(--navy)}
+footer{background:#0A1A33;color:#fff;padding:28px 16px;text-align:center;font-size:17px}footer a{color:var(--gold2)}
+.float{position:fixed;bottom:18px;right:18px;background:#25D366;color:#fff;width:68px;height:68px;border-radius:50%;display:grid;place-items:center;font-size:30px;box-shadow:0 6px 18px rgba(0,0,0,.3);z-index:20}
+.admin-box{background:#fff;border:3px solid var(--navy);border-radius:18px;padding:22px;margin:16px auto;max-width:760px}
+.admin-card{background:#F2F3F5;border:1px solid #ddd;border-radius:12px;padding:14px;margin-bottom:12px}
+.small{font-size:15px;color:#666}
+.team-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.team-card{background:#fff;border:2px solid #E8EAF0;border-radius:14px;padding:16px;text-align:center}
+.team-card img{width:100px;height:100px;object-fit:cover;border-radius:50%;border:3px solid var(--gold);background:#E8EAF0}
+.team-avatar{width:100px;height:100px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-size:36px;font-weight:900;margin:0 auto;border:3px solid var(--gold)}
+.upload-preview{width:100%;max-height:150px;object-fit:contain;background:#fff;border:2px dashed #999;border-radius:10px;margin:8px 0}
+.emergency{background:#C0392B;color:#fff;padding:18px;border-radius:12px;text-align:center;margin:16px 0}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.team-grid{grid-template-columns:1fr 1fr}.hero h2{font-size:30px}body{font-size:17px}}
+</style>
+</head>
+<body>
+
+<!-- PUBLIC SITE -->
+<div id="site">
+<div class="topbar">🛡️ DTS SECURITY SERVICES • OPEN 24 HOURS • BELLADONNA ESTATE</div>
+<header>
+  <div class="logo-box" id="headerLogo"></div>
+  <a class="btn" href="#quote">Get Quote</a>
+</header>
+
+<section class="hero">
+  <div class="hero-logo" id="heroLogo"></div><br>
+  <span class="badge">SECURITY GUARD SERVICE • BLUE DOWNS</span>
+  <h2>Your Safety.<br><span>Our Duty. 24 Hours.</span></h2>
+  <p>Professional security guards for homes, businesses and estates. Trained, uniformed, reliable. We protect what matters most to you.</p>
+  <div class="hero-btns">
+    <a class="btn" id="heroWhatsApp" href="#" target="_blank">💬 WhatsApp Us</a>
+    <a class="btn btn-white" id="heroCall" href="#">📞 Call 021 828 9435</a>
+  </div>
+  <div class="trust"><div>⭐ 5.0 Rated</div><div>🕐 Open 24 Hours</div><div>♿ Wheelchair Accessible</div></div>
+</section>
+
+<div class="section" style="padding-top:10px;padding-bottom:0">
+  <div class="emergency"><b>🚨 NEED A GUARD URGENTLY?</b><br>Tap Call Now. We answer 24 hours.<br><br><a class="btn btn-white" id="emergencyCall" href="#" style="width:100%">📞 CALL NOW</a></div>
+</div>
+
+<section class="section">
+  <h3>Our Security Services</h3>
+  <p class="sub">Tap WhatsApp to book. Prices are set by the owner.</p>
+  <div class="grid" id="servicesGrid"></div>
+  <div class="price"><b>Special Offer:</b> <span id="specialText"></span></div>
+</section>
+
+<section class="section" style="background:#F2F3F5;border-radius:18px">
+  <h3>Meet Our Team</h3>
+  <p class="sub">Trained, checked and uniformed guards. Professional and respectful.</p>
+  <div class="team-grid" id="teamGrid"></div>
+</section>
+
+<section class="section">
+  <h3>What Our Client Says</h3>
+  <div class="review"><div class="stars">★★★★★</div><p><b>5.0 Stars — Perfect Rating</b></p><p style="font-size:17px;color:#555">— Zamikhaya Lisana • Google Review • 11 months ago</p><p style="margin-top:8px">Trusted security service in Belladonna Estate. Professional and reliable.</p></div>
+  <p style="font-size:16px;color:#555;margin-top:8px">All reviews are 5 stars. One review on Google — 5.0 rating.</p>
+</section>
+
+<section class="section" id="quote">
+  <form onsubmit="sendWhatsApp(event)" style="background:var(--navy);color:#fff;padding:24px;border-radius:18px">
+    <h3 style="color:#fff;font-size:28px">Get a FREE Security Quote</h3>
+    <p style="font-size:18px;opacity:.9;margin-bottom:14px">Fill this in 30 seconds. It goes straight to DTS on WhatsApp.</p>
+    <label>Your Name</label><input id="name" required>
+    <label>Your Area</label><select id="area"><option>Belladonna Estate</option><option>Blue Downs</option><option>Kuils River</option><option>Mfuleni</option><option>Delft</option><option>Other Cape Town</option></select>
+    <label>What Do You Need?</label><select id="serviceSelect"></select>
+    <label>Tell Us About Your Property</label><textarea id="msg" rows="3"></textarea>
+    <button class="btn" style="width:100%;font-size:20px" type="submit">Send On WhatsApp →</button>
+    <p style="text-align:center;margin-top:12px;font-size:16px">Or Call Direct: <b>021 828 9435</b></p>
+  </form>
+</section>
+
+<section class="section">
+  <h3>Why Choose DTS?</h3>
+  <div class="grid">
+    <div class="card"><h4>✅ 24 Hour Service</h4><p>Day and night guards. We never close.</p></div>
+    <div class="card"><h4>✅ Trained Guards</h4><p>Professional, uniformed, checked guards.</p></div>
+    <div class="card"><h4>✅ CCTV & Patrols</h4><p>Cameras, patrols, access control for your property.</p></div>
+    <div class="card"><h4>✅ Local & Fast</h4><p>Based in Belladonna Estate. Fast response in Blue Downs.</p></div>
+  </div>
+  <h3 style="margin-top:28px">Areas We Serve</h3>
+  <div class="areas"><span>Belladonna Estate</span><span>Blue Downs</span><span>Kuils River</span><span>Mfuleni</span><span>Delft</span><span>Cape Town</span></div>
+  <p style="margin-top:16px;font-size:18px"><b>Address:</b> 21 Lily Kate Cres, Belladonna Estate, Cape Town, 7100<br><b>Plus Code:</b> 2M9R+GC Blue Downs, Cape Town<br><b>Phone:</b> 021 828 9435<br><b>Hours:</b> Open 24 Hours<br><b>Access:</b> Wheelchair-accessible car park</p>
+  <a class="btn btn-navy" href="https://www.google.com/maps/search/?api=1&query=21+Lily+Kate+Cres+Belladonna+Estate+Cape+Town+7100" target="_blank">📍 Get Directions</a>
+</section>
+
+<footer>
+  <h3 style="color:#fff">DTS SECURITY SERVICES</h3>
+  <p>Security Guard Service • Open 24 Hours • Belladonna Estate</p>
+  <p style="margin-top:10px">📍 21 Lily Kate Cres, Belladonna Estate, 7100<br>⭐ 5.0 on Google • 📞 021 828 9435</p>
+  <p style="margin-top:10px"><a id="footerWhatsApp" href="#">WhatsApp Us</a> • <a id="footerCall" href="#">Call Us</a> • <a href="#admin" onclick="showAdmin()">Owner Login</a></p>
+  <p style="opacity:.6;margin-top:12px;font-size:14px">Website built by Avatar Web Store • © 2026 DTS Security Services</p>
+</footer>
+<a class="float" id="floatWhatsApp" href="#" target="_blank">💬</a>
+</div>
+
+<!-- OWNER ADMIN - CLEAN LOGIN, NO TEXT INSIDE BOXES -->
+<div id="admin" style="display:none;background:#E8EAF0;min-height:100vh;padding:16px">
+  <div class="admin-box">
+    <h2 style="color:var(--navy)">🔐 Owner Dashboard</h2>
+    <p class="small">DTS Security Services</p>
+    <div id="loginBox" style="margin-top:16px">
+      <label>Your Phone Number</label>
+      <input id="loginPhone" inputmode="numeric">
+      <label>Password</label>
+      <input id="loginPass" type="password" inputmode="numeric">
+      <button class="btn" style="width:100%" onclick="doLogin()">Login</button>
+      <p id="loginError" style="color:red;font-weight:800"></p>
+    </div>
+
+    <div id="dashBox" style="display:none;margin-top:16px">
+      <p><b>Welcome, Owner ✅</b> <span id="showPhone"></span></p>
+      <button class="btn btn-grey" onclick="doLogout()">Log Out</button>
+      <button class="btn btn-navy" onclick="document.getElementById('passBox').style.display='block'">Change Password</button>
+
+      <div id="passBox" style="display:none;margin-top:12px;background:#FFF8E1;padding:16px;border-radius:12px">
+        <h4>Change Password - Numbers Only</h4>
+        <label>Old Password</label><input id="oldPass" inputmode="numeric">
+        <label>New Password</label><input id="newPass" inputmode="numeric">
+        <label>Repeat New Password</label><input id="newPass2" inputmode="numeric">
+        <button class="btn" onclick="changePassword()">Save New Password</button>
+        <p id="passMsg" style="font-weight:800"></p>
+      </div>
+
+      <h3 style="margin-top:22px">1. Company Logo</h3>
+      <p class="small">Demo logo is there now. Upload your real logo here.</p>
+      <div id="currentLogoPreview"></div>
+      <label>Choose Logo Photo</label>
+      <input type="file" id="logoFile" accept="image/*" onchange="uploadLogo(event)">
+      <button class="btn btn-grey" onclick="removeLogo()">Remove Logo - Use Demo Logo</button>
+
+      <h3 style="margin-top:22px">2. Your Phone / WhatsApp Number</h3>
+      <input id="editPhone">
+
+      <h3>3. Special Offer</h3>
+      <input id="editSpecial">
+
+      <h3>4. Services & Prices</h3>
+      <p class="small">Owner can add, edit price, delete.</p>
+      <div id="editServices"></div>
+      <button class="btn btn-green" onclick="addService()">+ Add Service</button>
+
+      <h3 style="margin-top:22px">5. Your Team</h3>
+      <p class="small">Add your guards. Add photo, name, job.</p>
+      <div id="editTeam"></div>
+      <button class="btn btn-green" onclick="addBrother()">+ Add Team Member</button>
+
+      <br><br>
+      <button class="btn" style="width:100%;font-size:20px" onclick="saveAll()">💾 SAVE ALL CHANGES</button>
+      <p id="saveMsg" style="color:green;font-weight:800;margin-top:8px"></p>
+      <button class="btn btn-grey" style="width:100%;margin-top:10px" onclick="showSite()">← Back To Website</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const OWNER_PHONE = "27218289435";
+const DEFAULT_SERVICES = [
+  {name:"🛡️ Armed / Unarmed Guards", desc:"Day and night guards for homes, businesses and estates.", price:"From R4500 / month"},
+  {name:"🏠 House & Estate Security", desc:"Access control, patrols, gate security for estates.", price:"Free Quote"},
+  {name:"🏢 Business Security", desc:"Guards for shops, offices, warehouses and sites.", price:"Free Quote"},
+  {name:"📹 CCTV Installation & Monitoring", desc:"Cameras installed and monitored. See your property anytime.", price:"From R2500"},
+  {name:"🚶 Patrol Services", desc:"Regular patrols in your area. Visible security that stops crime.", price:"From R1500 / month"},
+  {name:"🎉 Event Security", desc:"Guards for events, funerals, weddings and functions.", price:"Free Quote"}
+];
+const DEFAULT_TEAM = [
+  {name:"Owner", role:"Owner & Manager", phone:"", photo:""},
+  {name:"Team Member 2", role:"Security Guard", phone:"", photo:""},
+  {name:"Team Member 3", role:"Security Guard", phone:"", photo:""}
+];
+function getData(){
+  let d = JSON.parse(localStorage.getItem('dts_security_v1')||'null');
+  if(!d){ d={phone:OWNER_PHONE, services:DEFAULT_SERVICES, team:DEFAULT_TEAM, special:"Free Security Assessment This Week • 24 Hour Service • Fast Response in Blue Downs.", password:OWNER_PHONE.replace('27','0'), logo:""}; localStorage.setItem('dts_security_v1', JSON.stringify(d)); }
+  return d;
+}
+function saveData(d){ localStorage.setItem('dts_security_v1', JSON.stringify(d)); }
+function logoHTML(big){
+  let d=getData();
+  if(d.logo){ return `<img src="${d.logo}" alt="Logo" style="${big?'max-height:80px;max-width:280px':'height:58px;max-width:210px'}">`; }
+  return big ? `<div style="font-size:26px;font-weight:900;color:var(--navy)">DTS SECURITY<br><span style="font-size:15px;color:#C9A24B">SERVICES</span><br><span style="font-size:11px;color:#666">BELLADONNA ESTATE • 24 HOURS</span></div>` : `<div style="display:flex;align-items:center;gap:10px"><div class="logo-demo">🛡️</div><div class="logo-text"><b>DTS SECURITY</b><br><span>SERVICES</span></div></div>`;
+}
+function renderSite(){
+  let d=getData();
+  let wa="https://wa.me/"+d.phone+"?text="+encodeURIComponent("Hi DTS Security Services, I need security in Blue Downs");
+  document.getElementById('headerLogo').innerHTML=logoHTML(false);
+  document.getElementById('heroLogo').innerHTML=logoHTML(true);
+  document.getElementById('heroWhatsApp').href=wa;
+  document.getElementById('footerWhatsApp').href=wa;
+  document.getElementById('floatWhatsApp').href=wa;
+  document.getElementById('heroCall').href="tel:+"+d.phone;
+  document.getElementById('footerCall').href="tel:+"+d.phone;
+  document.getElementById('emergencyCall').href="tel:+"+d.phone;
+  document.getElementById('specialText').textContent=d.special;
+  let grid=document.getElementById('servicesGrid'); let sel=document.getElementById('serviceSelect');
+  grid.innerHTML=""; sel.innerHTML="";
+  d.services.forEach(s=>{ grid.innerHTML+=`<div class="card"><h4>${s.name}</h4><p>${s.desc}</p><div class="price-tag">${s.price}</div><a class="btn" style="margin-top:12px;padding:12px 18px;font-size:17px" href="${wa}" target="_blank">Book This →</a></div>`; sel.innerHTML+=`<option>${s.name} - ${s.price}</option>`; });
+  let tg=document.getElementById('teamGrid'); tg.innerHTML="";
+  d.team.forEach(m=>{
+    let img = m.photo ? `<img src="${m.photo}">` : `<div class="team-avatar">${m.name.charAt(0)}</div>`;
+    let btn = m.phone ? `<a href="https://wa.me/${m.phone}" target="_blank" style="display:inline-block;margin-top:10px;background:#25D366;color:#fff;padding:8px 14px;border-radius:999px;font-size:15px;font-weight:800">WhatsApp</a>` : `<span style="font-size:14px;color:#999">No WhatsApp yet</span>`;
+    tg.innerHTML+=`<div class="team-card">${img}<h4 style="margin-top:10px;color:var(--navy)">${m.name}</h4><p style="font-size:16px;color:#555">${m.role}</p>${btn}</div>`;
+  });
+}
+function sendWhatsApp(e){ e.preventDefault(); let d=getData(); let text="Hi DTS Security! I'm "+document.getElementById('name').value+" from "+document.getElementById('area').value+". I need: "+document.getElementById('serviceSelect').value+". Details: "+document.getElementById('msg').value; window.open("https://wa.me/"+d.phone+"?text="+encodeURIComponent(text),"_blank"); }
+function showAdmin(){ document.getElementById('site').style.display='none'; document.getElementById('admin').style.display='block'; window.scrollTo(0,0); if(localStorage.getItem('dts_security_logged')==='yes'){ showDash(); } }
+function showSite(){ document.getElementById('admin').style.display='none'; document.getElementById('site').style.display='block'; renderSite(); }
+function doLogin(){ let d=getData(); let phone=document.getElementById('loginPhone').value.replace(/\s/g,''); let pass=document.getElementById('loginPass').value.replace(/\s/g,''); if((phone===d.phone.replace('27','0')||phone===d.phone)&&pass===d.password){ localStorage.setItem('dts_security_logged','yes'); showDash(); } else { document.getElementById('loginError').textContent="Wrong number or password."; } }
+function showDash(){ let d=getData(); document.getElementById('loginBox').style.display='none'; document.getElementById('dashBox').style.display='block'; document.getElementById('showPhone').textContent=d.phone; document.getElementById('editPhone').value=d.phone; document.getElementById('editSpecial').value=d.special; document.getElementById('currentLogoPreview').innerHTML = d.logo ? `<img src="${d.logo}" class="upload-preview">` : `<p class="small">Currently using DEMO logo. Upload yours below.</p>`; renderEditServices(); renderEditTeam(); }
+function renderEditServices(){ let d=getData(); let box=document.getElementById('editServices'); box.innerHTML=""; d.services.forEach((s,i)=>{ box.innerHTML+=`<div class="admin-card"><label>Service ${i+1} Name</label><input class="srv" data-i="${i}" data-f="name" value="${s.name}"><label>Description</label><input class="srv" data-i="${i}" data-f="desc" value="${s.desc}"><label>Price</label><input class="srv" data-i="${i}" data-f="price" value="${s.price}"><button class="btn btn-grey" onclick="deleteService(${i})">X Delete</button></div>`; }); }
+function renderEditTeam(){ let d=getData(); let box=document.getElementById('editTeam'); box.innerHTML=""; d.team.forEach((m,i)=>{ box.innerHTML+=`<div class="admin-card"><label>Team ${i+1} - Name</label><input class="team" data-i="${i}" data-f="name" value="${m.name}"><label>Job / Role</label><input class="team" data-i="${i}" data-f="role" value="${m.role}"><label>His WhatsApp (with 27)</label><input class="team" data-i="${i}" data-f="phone" value="${m.phone}"><label>His Photo</label>${m.photo?`<img src="${m.photo}" class="upload-preview">`:``}<input type="file" accept="image/*" onchange="uploadBrotherPhoto(event,${i})"><button class="btn btn-grey" onclick="deleteBrother(${i})">X Remove</button></div>`; }); }
+function addService(){ let d=getData(); d.services.push({name:"🛡️ New Service",desc:"Describe it",price:"Free Quote"}); saveData(d); renderEditServices(); }
+function deleteService(i){ if(!confirm("Delete this service?")) return; let d=getData(); d.services.splice(i,1); saveData(d); renderEditServices(); }
+function addBrother(){ let d=getData(); d.team.push({name:"New Member",role:"Security Guard",phone:"",photo:""}); saveData(d); renderEditTeam(); }
+function deleteBrother(i){ if(!confirm("Remove this member?")) return; let d=getData(); d.team.splice(i,1); saveData(d); renderEditTeam(); }
+function uploadLogo(e){ let f=e.target.files[0]; if(!f) return; let r=new FileReader(); r.onload=function(){ let d=getData(); d.logo=r.result; saveData(d); document.getElementById('currentLogoPreview').innerHTML=`<img src="${d.logo}" class="upload-preview">`; renderSite(); alert("Logo uploaded! Go back to website to see it."); }; r.readAsDataURL(f); }
+function removeLogo(){ let d=getData(); d.logo=""; saveData(d); document.getElementById('currentLogoPreview').innerHTML=`<p class="small">Demo logo restored.</p>`; renderSite(); }
+function uploadBrotherPhoto(e,i){ let f=e.target.files[0]; if(!f) return; let r=new FileReader(); r.onload=function(){ let d=getData(); d.team[i].photo=r.result; saveData(d); renderEditTeam(); renderSite(); }; r.readAsDataURL(f); }
+function saveAll(){ let d=getData(); d.phone=document.getElementById('editPhone').value.replace(/\s/g,'').replace(/^\+/,''); d.special=document.getElementById('editSpecial').value; let srvInputs=document.querySelectorAll('.srv'); let ns=[]; for(let k=0;k<srvInputs.length;k+=3){ ns.push({name:srvInputs[k].value,desc:srvInputs[k+1].value,price:srvInputs[k+2].value}); } d.services=ns; let teamInputs=document.querySelectorAll('.team'); let nt=[]; for(let k=0;k<teamInputs.length;k+=3){ let idx=k/3; nt.push({name:teamInputs[k].value,role:teamInputs[k+1].value,phone:teamInputs[k+2].value,photo:d.team[idx]?d.team[idx].photo:""}); } d.team=nt; saveData(d); document.getElementById('saveMsg').textContent="Saved! Website updated."; renderSite(); }
+function changePassword(){ let d=getData(); let o=document.getElementById('oldPass').value.trim(); let n=document.getElementById('newPass').value.trim(); let n2=document.getElementById('newPass2').value.trim(); if(o!==d.password){ document.getElementById('passMsg').style.color='red'; document.getElementById('passMsg').textContent="Old password wrong."; return; } if(!/^[0-9]+$/.test(n)){ document.getElementById('passMsg').style.color='red'; document.getElementById('passMsg').textContent="Numbers only."; return; } if(n!==n2){ document.getElementById('passMsg').style.color='red'; document.getElementById('passMsg').textContent="Passwords do not match."; return; } d.password=n; saveData(d); document.getElementById('passMsg').style.color='green'; document.getElementById('passMsg').textContent="Password changed!"; }
+function doLogout(){ localStorage.removeItem('dts_security_logged'); location.reload(); }
+if(location.hash==="#admin"){ showAdmin(); }
+renderSite();
+</script>
+</body>
+</html>
